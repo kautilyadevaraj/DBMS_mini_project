@@ -22,13 +22,19 @@ import { RecentSales } from "@/components/recent-sales";
 import { Search } from "@/components/search";
 import TeamSwitcher from "@/components/team-switcher";
 import { UserNav } from "@/components/user-nav";
+import TotalProfit from "@/components/total-profit";
+import TotalSales from "@/components/total-sales";
+import TotalUniqueCustomers from "@/components/TotalUniqueCustomers";
+import TotalSalesLatestMonth from "@/components/latest-month-sales";
+import { Suspense } from "react";
+import { TotalProfitSkeleton } from "@/components/skeletons";
 
 export const metadata: Metadata = {
   title: "Dashboard",
   description: "Example dashboard app built using the components.",
 };
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
   return (
     <>
       <div className="md:hidden">
@@ -100,16 +106,15 @@ export default function DashboardPage() {
                     </svg>
                   </CardHeader>
                   <CardContent>
-                    <div className="text-2xl font-bold">$45,231.89</div>
-                    <p className="text-xs text-muted-foreground">
-                      +20.1% from last month
-                    </p>
+                    <Suspense fallback={<TotalProfitSkeleton />}>
+                      <TotalProfit />
+                    </Suspense>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">
-                      Subscriptions
+                      Total Customers
                     </CardTitle>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -127,10 +132,7 @@ export default function DashboardPage() {
                     </svg>
                   </CardHeader>
                   <CardContent>
-                    <div className="text-2xl font-bold">+2350</div>
-                    <p className="text-xs text-muted-foreground">
-                      +180.1% from last month
-                    </p>
+                    <TotalUniqueCustomers/>
                   </CardContent>
                 </Card>
                 <Card>
@@ -150,17 +152,12 @@ export default function DashboardPage() {
                       <path d="M2 10h20" />
                     </svg>
                   </CardHeader>
-                  <CardContent>
-                    <div className="text-2xl font-bold">+12,234</div>
-                    <p className="text-xs text-muted-foreground">
-                      +19% from last month
-                    </p>
-                  </CardContent>
+                  <CardContent><TotalSales/></CardContent>
                 </Card>
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">
-                      Active Now
+                      Last Month Sales
                     </CardTitle>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -176,10 +173,7 @@ export default function DashboardPage() {
                     </svg>
                   </CardHeader>
                   <CardContent>
-                    <div className="text-2xl font-bold">+573</div>
-                    <p className="text-xs text-muted-foreground">
-                      +201 since last hour
-                    </p>
+                    <TotalSalesLatestMonth/>
                   </CardContent>
                 </Card>
               </div>
@@ -194,10 +188,8 @@ export default function DashboardPage() {
                 </Card>
                 <Card className="col-span-3">
                   <CardHeader>
-                    <CardTitle>Recent Sales</CardTitle>
-                    <CardDescription>
-                      You made 265 sales this month.
-                    </CardDescription>
+                    <CardTitle>Recent Orders</CardTitle>
+                    
                   </CardHeader>
                   <CardContent>
                     <RecentSales />

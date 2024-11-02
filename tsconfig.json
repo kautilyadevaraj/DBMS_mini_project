@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/seedCustomers.mjs", "lib/data.mjs", "app/api/users/createTable.js", "lib/mysql.js", "app/testing/page.js"],
   "exclude": ["node_modules"]
 }
