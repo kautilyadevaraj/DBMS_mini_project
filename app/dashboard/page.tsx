@@ -16,14 +16,14 @@ import {
 
 import { MainNav } from "@/components/main-nav";
 import { Overview } from "@/components/overview";
-import { RecentSales } from "@/components/recent-sales";
+import { RecentSales } from "@/components/dashboard/recent-sales";
 import { Search } from "@/components/search";
-import TeamSwitcher from "@/components/team-switcher";
+import TeamSwitcher from "@/components/dashboard/team-switcher";
 import { UserNav } from "@/components/user-nav";
-import TotalProfit from "@/components/total-profit";
-import TotalSales from "@/components/total-sales";
-import TotalUniqueCustomers from "@/components/TotalUniqueCustomers";
-import TotalSalesLatestMonth from "@/components/latest-month-sales";
+import TotalProfit from "@/components/dashboard/total-profit";
+import TotalSales from "@/components/dashboard/total-sales";
+import TotalUniqueCustomers from "@/components/dashboard/TotalUniqueCustomers";
+import TotalSalesLatestMonth from "@/components/dashboard/latest-month-sales";
 import { Suspense } from "react";
 import { TotalProfitSkeleton } from "@/components/skeletons";
 
