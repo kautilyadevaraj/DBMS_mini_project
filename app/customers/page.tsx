@@ -3,15 +3,11 @@ import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 
-import { DemoCookieSettings } from "@/components/customers/cookie-settings";
+
 import { DemoCreateAccount } from "@/components/customers/create-account";
-import { DemoDatePicker } from "@/components/customers/date-picker";
-import { DemoGithub } from "@/components/customers/github-card";
-import { DemoNotifications } from "@/components/customers/notifications";
-import { DemoPaymentMethod } from "@/components/customers/payment-method";
-import { DemoReportAnIssue } from "@/components/customers/report-an-issue";
+
 import { DemoShareDocument } from "@/components/customers/share-document";
-import { DemoTeamMembers } from "@/components/customers/team-members";
+
 import { MainNav } from "@/components/main-nav";
 
 export const metadata: Metadata = {
