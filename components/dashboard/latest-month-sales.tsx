@@ -8,10 +8,10 @@ export default async function TotalSalesLatestMonth() {
   return (
     <div>
 
-      <div className="text-2xl font-bold">
+      <div className="text-xl font-bold">
         <NumberTicker value={totalSales.total_sales} />
       </div>
-      <p className="text-sm text-muted-foreground">+2,010 since previous month</p>
+      <p className="text-xs text-muted-foreground">+2,010 since previous month</p>
     </div>
   );
 }

@@ -8,17 +8,17 @@ export async function RecentSales() {
     <div className="space-y-8">
       {latestOrders.map((order, index) => (
         <div key={index} className="flex items-center">
-          <Avatar className="h-14 w-14">
+          <Avatar className="h-8 w-8">
             <AvatarImage src="/avatars/01.png" alt="Avatar" />
             <AvatarFallback>
               {order.customername?.slice(0, 2).toUpperCase()}
             </AvatarFallback>
           </Avatar>
           <div className="ml-4 space-y-1">
-            <p className=" font-medium leading-none">
+            <p className="text-sm font-medium leading-none">
               {order.customername}
             </p>
-            <p className="text-md text-muted-foreground">
+            <p className="text-sm text-muted-foreground">
               {order.product_name}
             </p>
           </div>
