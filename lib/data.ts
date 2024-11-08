@@ -5,6 +5,7 @@ import { LatestOrderInfo } from "./definitions";
 import { TotalUniqueCustomersType } from "./definitions";
 import { MonthlySales } from "./definitions";
 import { MonthlyRevenue } from "./definitions";
+import { NewCustomer } from "./definitions";
 
 export async function fetchTotalProfit() {
   try {
@@ -111,4 +112,28 @@ ORDER BY
 
         `;
   return result.rows;
+}
+
+export async function addCustomer(customerData: NewCustomer): Promise<void> {
+  try {
+    console.log(customerData);
+    await sql`
+      INSERT INTO Customers (CustomerID, CustomerName, Segment, Country, City, State, PostalCode)
+      VALUES (${customerData.customerID}, ${customerData.name}, 
+              ${customerData.country}, ${customerData.city}, ${customerData.state}, ${customerData.postalCode});
+    `;
+  } catch (error) {
+    console.error("Error adding new customer:", error);
+    throw error;
+  }
+}
+
+export async function findCustomers(customerName : string): Promise<NewCustomer[]> {
+  try {
+    const result = await sql<NewCustomer>`SELECT * FROM Customers WHERE CustomerName LIKE ${customerName}%`;
+    return result.rows;
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
 }

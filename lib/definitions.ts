@@ -26,3 +26,12 @@ export type MonthlyRevenue = {
   total_revenue: number;
 };
 
+export type NewCustomer = {
+  customerID: string;
+  name: string;
+  sector: string;
+  country: string;
+  city: string;
+  state: string;
+  postalCode: number;
+};

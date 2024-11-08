@@ -1,18 +1,17 @@
 import { fetchTotalSalesLatestMonth } from "@/lib/data";
+import NumberTicker from "../ui/number-ticker";
 
-function formatNumberWithCommas(num: number): string {
-  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
 
 export default async function TotalSalesLatestMonth() {
   const totalSales= await fetchTotalSalesLatestMonth();
 
   return (
     <div>
+
       <div className="text-2xl font-bold">
-        {formatNumberWithCommas(totalSales.total_sales)}
+        <NumberTicker value={totalSales.total_sales} />
       </div>
-      <p className="text-xs text-muted-foreground">+201 since last hour</p>
+      <p className="text-sm text-muted-foreground">+2,010 since previous month</p>
     </div>
   );
 }

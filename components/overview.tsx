@@ -60,13 +60,13 @@ export function Overview() {
         <XAxis
           dataKey="name"
           stroke="#888888"
-          fontSize={12}
+          fontSize={20}
           tickLine={false}
           axisLine={false}
         />
         <YAxis
           stroke="#888888"
-          fontSize={12}
+          fontSize={13}
           tickLine={false}
           axisLine={false}
           tickFormatter={(value) => `$${value}`}
