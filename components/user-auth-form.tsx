@@ -27,7 +27,7 @@ export function UserAuthForm({
     setTimeout(() => {
       setIsLoading(false);
 
-      if (email === "kautilya@gmail.com" && password === "kdk") {
+      if (email === "dbms@gmail.com" && password === "dbms") {
         router.push("/dashboard");
       } else {
         alert("Invalid email or password.");
