@@ -81,12 +81,12 @@ Open http://localhost:3000 to view the dashboard in your browser.
 **Visualizations:** Monthly sales are shown in a bar graph for easy trend analysis.
 **Recent Sales:** Access a list of recent transactions, providing quick insights into recent customer activity.
 
-### Technologies Used
+## Technologies Used
 
 Frontend: Next.js, React, Tailwind CSS
 Backend: Vercel PostgreSQL
 Database: PostgreSQL
 
-### Contributing
+## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request.
