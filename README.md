@@ -55,7 +55,7 @@ PostgreSQL: Version compatible with Vercel PostgreSQL
 Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/finance-manager-dashboard.git
+git clone https://github.com/kautilyadevaraj/DBMS_mini_project.git
 cd finance-manager-dashboard
 ```
 
