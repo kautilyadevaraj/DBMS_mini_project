@@ -47,12 +47,12 @@ The project uses four main tables in the Vercel PostgreSQL database:
 These instructions will help you set up and run the project locally.
 ### Prerequisites
 
-    Node.js: Version 14 or higher
-    PostgreSQL: Version compatible with Vercel PostgreSQL
+Node.js: Version 14 or higher
+PostgreSQL: Version compatible with Vercel PostgreSQL
 
 ### Installation
 
-    Clone the Repository
+Clone the Repository
 
 ```bash
 git clone https://github.com/yourusername/finance-manager-dashboard.git
@@ -66,14 +66,14 @@ npm install
 
 ### Set Up the Database
 
-    Create a PostgreSQL database and add the four tables using the provided schema.
-    Update the database connection information in your environment file .env.local.
+Create a PostgreSQL database and add the four tables using the provided schema.
+Update the database connection information in your environment file .env.local.
 
 ### Run the Development Server
 ```bash
     npm run dev
 ```
-    Open http://localhost:3000 to view the dashboard in your browser.
+Open http://localhost:3000 to view the dashboard in your browser.
 
 ## Usage
 
@@ -83,9 +83,9 @@ npm install
 
 ### Technologies Used
 
-    Frontend: Next.js, React, Tailwind CSS
-    Backend: Vercel PostgreSQL
-    Database: PostgreSQL
+Frontend: Next.js, React, Tailwind CSS
+Backend: Vercel PostgreSQL
+Database: PostgreSQL
 
 ### Contributing
 
